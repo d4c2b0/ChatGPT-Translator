@@ -1,0 +1,234 @@
+@use "sass:math";
+
+@function spToRem($number) {
+  @return math.div($number, 16);
+}
+
+// display - large
+$md-sys-typescale-display-large-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-display-large-font-family-style: Regular;
+$md-sys-typescale-display-large-font-weight: 400;
+$md-sys-typescale-display-large-font-size: #{spToRem(57)}rem;
+$md-sys-typescale-display-large-line-height: #{spToRem(64)}rem;
+$md-sys-typescale-display-large-letter-spacing: #{spToRem(-0.25)}rem;
+// display - medium
+$md-sys-typescale-display-medium-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-display-medium-font-family-style: Regular;
+$md-sys-typescale-display-medium-font-weight: 400;
+$md-sys-typescale-display-medium-font-size: #{spToRem(45)}rem;
+$md-sys-typescale-display-medium-line-height: #{spToRem(52)}rem;
+$md-sys-typescale-display-medium-letter-spacing: 0;
+// display - small
+$md-sys-typescale-display-small-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-display-small-font-family-style: Regular;
+$md-sys-typescale-display-small-font-weight: 400;
+$md-sys-typescale-display-small-font-size: #{spToRem(36)}rem;
+$md-sys-typescale-display-small-line-height: #{spToRem(44)}rem;
+$md-sys-typescale-display-small-letter-spacing: 0;
+// headline - large
+$md-sys-typescale-headline-large-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-headline-large-font-family-style: Regular;
+$md-sys-typescale-headline-large-font-weight: 400;
+$md-sys-typescale-headline-large-font-size: #{spToRem(32)}rem;
+$md-sys-typescale-headline-large-line-height: #{spToRem(40)}rem;
+$md-sys-typescale-headline-large-letter-spacing: 0;
+// headline - medium
+$md-sys-typescale-headline-medium-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-headline-medium-font-family-style: Regular;
+$md-sys-typescale-headline-medium-font-weight: 400;
+$md-sys-typescale-headline-medium-font-size: #{spToRem(28)}rem;
+$md-sys-typescale-headline-medium-line-height: #{spToRem(36)}rem;
+$md-sys-typescale-headline-medium-letter-spacing: 0;
+// headline - small
+$md-sys-typescale-headline-small-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-headline-small-font-family-style: Regular;
+$md-sys-typescale-headline-small-font-weight: 400;
+$md-sys-typescale-headline-small-font-size: #{spToRem(24)}rem;
+$md-sys-typescale-headline-small-line-height: #{spToRem(32)}rem;
+$md-sys-typescale-headline-small-letter-spacing: 0;
+// body - large
+$md-sys-typescale-body-large-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-body-large-font-family-style: Regular;
+$md-sys-typescale-body-large-font-weight: 400;
+$md-sys-typescale-body-large-font-size: #{spToRem(16)}rem;
+$md-sys-typescale-body-large-line-height: #{spToRem(24)}rem;
+$md-sys-typescale-body-large-letter-spacing: #{spToRem(0.5)}rem;
+// body - medium
+$md-sys-typescale-body-medium-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-body-medium-font-family-style: Regular;
+$md-sys-typescale-body-medium-font-weight: 400;
+$md-sys-typescale-body-medium-font-size: #{spToRem(14)}rem;
+$md-sys-typescale-body-medium-line-height: #{spToRem(20)}rem;
+$md-sys-typescale-body-medium-letter-spacing: #{spToRem(0.25)}rem;
+// body - small
+$md-sys-typescale-body-small-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-body-small-font-family-style: Regular;
+$md-sys-typescale-body-small-font-weight: 400;
+$md-sys-typescale-body-small-font-size: #{spToRem(12)}rem;
+$md-sys-typescale-body-small-line-height: #{spToRem(16)}rem;
+$md-sys-typescale-body-small-letter-spacing: #{spToRem(0.4)}rem;
+// label - large
+$md-sys-typescale-label-large-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-label-large-font-family-style: Medium;
+$md-sys-typescale-label-large-font-weight: 500;
+$md-sys-typescale-label-large-font-size: #{spToRem(14)}rem;
+$md-sys-typescale-label-large-line-height: #{spToRem(20)}rem;
+$md-sys-typescale-label-large-letter-spacing: #{spToRem(0.1)}rem;
+// label - medium
+$md-sys-typescale-label-medium-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-label-medium-font-family-style: Medium;
+$md-sys-typescale-label-medium-font-weight: 500;
+$md-sys-typescale-label-medium-font-size: #{spToRem(12)}rem;
+$md-sys-typescale-label-medium-line-height: #{spToRem(16)}rem;
+$md-sys-typescale-label-medium-letter-spacing: #{spToRem(0.5)}rem;
+// label - small
+$md-sys-typescale-label-small-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-label-small-font-family-style: Medium;
+$md-sys-typescale-label-small-font-weight: 500;
+$md-sys-typescale-label-small-font-size: #{spToRem(11)}rem;
+$md-sys-typescale-label-small-line-height: #{spToRem(16)}rem;
+$md-sys-typescale-label-small-letter-spacing: #{spToRem(0.5)}rem;
+// title - large
+$md-sys-typescale-title-large-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-title-large-font-family-style: Regular;
+$md-sys-typescale-title-large-font-weight: 400;
+$md-sys-typescale-title-large-font-size: #{spToRem(22)}rem;
+$md-sys-typescale-title-large-line-height: #{spToRem(28)}rem;
+$md-sys-typescale-title-large-letter-spacing: 0;
+// title - medium
+$md-sys-typescale-title-medium-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-title-medium-font-family-style: Medium;
+$md-sys-typescale-title-medium-font-weight: 500;
+$md-sys-typescale-title-medium-font-size: #{spToRem(16)}rem;
+$md-sys-typescale-title-medium-line-height: #{spToRem(24)}rem;
+$md-sys-typescale-title-medium-letter-spacing: #{spToRem(0.15)}rem;
+// title - small
+$md-sys-typescale-title-small-font-family-name: Roboto, "Noto Sans JP";
+$md-sys-typescale-title-small-font-family-style: Medium;
+$md-sys-typescale-title-small-font-weight: 500;
+$md-sys-typescale-title-small-font-size: #{spToRem(14)}rem;
+$md-sys-typescale-title-small-line-height: #{spToRem(20)}rem;
+$md-sys-typescale-title-small-letter-spacing: #{spToRem(0.1)}rem;
+
+@mixin display-large {
+    // font-family: $md-sys-typescale-display-large-font-family-name;
+    font-style: $md-sys-typescale-display-large-font-family-style;
+    font-weight: $md-sys-typescale-display-large-font-weight;
+    font-size: $md-sys-typescale-display-large-font-size;
+    line-height: $md-sys-typescale-display-large-line-height;
+    letter-spacing: $md-sys-typescale-display-large-letter-spacing;
+    // text-transform: $md-sys-typescale-display-large-text-transform;
+    // text-decoration: $md-sys-typescale-display-large-text-decoration;
+}
+
+@mixin display-medium {
+    font-style: $md-sys-typescale-display-medium-font-family-style;
+    font-weight: $md-sys-typescale-display-medium-font-weight;
+    font-size: $md-sys-typescale-display-medium-font-size;
+    line-height: $md-sys-typescale-display-medium-line-height;
+    letter-spacing: $md-sys-typescale-display-medium-letter-spacing;
+}
+
+@mixin display-small {
+    font-style: $md-sys-typescale-display-small-font-family-style;
+    font-weight: $md-sys-typescale-display-small-font-weight;
+    font-size: $md-sys-typescale-display-small-font-size;
+    line-height: $md-sys-typescale-display-small-line-height;
+    letter-spacing: $md-sys-typescale-display-small-letter-spacing;
+}
+
+@mixin headline-large {
+    font-style: $md-sys-typescale-headline-large-font-family-style;
+    font-weight: $md-sys-typescale-headline-large-font-weight;
+    font-size: $md-sys-typescale-headline-large-font-size;
+    line-height: $md-sys-typescale-headline-large-line-height;
+    letter-spacing: $md-sys-typescale-headline-large-letter-spacing;
+}
+
+@mixin headline-medium {
+    font-style: $md-sys-typescale-headline-medium-font-family-style;
+    font-weight: $md-sys-typescale-headline-medium-font-weight;
+    font-size: $md-sys-typescale-headline-medium-font-size;
+    line-height: $md-sys-typescale-headline-medium-line-height;
+    letter-spacing: $md-sys-typescale-headline-medium-letter-spacing;
+}
+
+@mixin headline-small {
+    font-style: $md-sys-typescale-headline-small-font-family-style;
+    font-weight: $md-sys-typescale-headline-small-font-weight;
+    font-size: $md-sys-typescale-headline-small-font-size;
+    line-height: $md-sys-typescale-headline-small-line-height;
+    letter-spacing: $md-sys-typescale-headline-small-letter-spacing;
+}
+
+@mixin body-large {
+    font-style: $md-sys-typescale-body-large-font-family-style;
+    font-weight: $md-sys-typescale-body-large-font-weight;
+    font-size: $md-sys-typescale-body-large-font-size;
+    line-height: $md-sys-typescale-body-large-line-height;
+    letter-spacing: $md-sys-typescale-body-large-letter-spacing;
+}
+
+@mixin body-medium {
+    font-style: $md-sys-typescale-body-medium-font-family-style;
+    font-weight: $md-sys-typescale-body-medium-font-weight;
+    font-size: $md-sys-typescale-body-medium-font-size;
+    line-height: $md-sys-typescale-body-medium-line-height;
+    letter-spacing: $md-sys-typescale-body-medium-letter-spacing;
+}
+
+@mixin body-small {
+    font-style: $md-sys-typescale-body-small-font-family-style;
+    font-weight: $md-sys-typescale-body-small-font-weight;
+    font-size: $md-sys-typescale-body-small-font-size;
+    line-height: $md-sys-typescale-body-small-line-height;
+    letter-spacing: $md-sys-typescale-body-small-letter-spacing;
+}
+
+@mixin label-large {
+    font-style: $md-sys-typescale-label-large-font-family-style;
+    font-weight: $md-sys-typescale-label-large-font-weight;
+    font-size: $md-sys-typescale-label-large-font-size;
+    line-height: $md-sys-typescale-label-large-line-height;
+    letter-spacing: $md-sys-typescale-label-large-letter-spacing;
+}
+
+@mixin label-medium {
+    font-style: $md-sys-typescale-label-medium-font-family-style;
+    font-weight: $md-sys-typescale-label-medium-font-weight;
+    font-size: $md-sys-typescale-label-medium-font-size;
+    line-height: $md-sys-typescale-label-medium-line-height;
+    letter-spacing: $md-sys-typescale-label-medium-letter-spacing;
+}
+
+@mixin label-small {
+    font-style: $md-sys-typescale-label-small-font-family-style;
+    font-weight: $md-sys-typescale-label-small-font-weight;
+    font-size: $md-sys-typescale-label-small-font-size;
+    line-height: $md-sys-typescale-label-small-line-height;
+    letter-spacing: $md-sys-typescale-label-small-letter-spacing;
+}
+
+@mixin title-large {
+    font-style: $md-sys-typescale-title-large-font-family-style;
+    font-weight: $md-sys-typescale-title-large-font-weight;
+    font-size: $md-sys-typescale-title-large-font-size;
+    line-height: $md-sys-typescale-title-large-line-height;
+    letter-spacing: $md-sys-typescale-title-large-letter-spacing;
+}
+
+@mixin title-medium {
+    font-style: $md-sys-typescale-title-medium-font-family-style;
+    font-weight: $md-sys-typescale-title-medium-font-weight;
+    font-size: $md-sys-typescale-title-medium-font-size;
+    line-height: $md-sys-typescale-title-medium-line-height;
+    letter-spacing: $md-sys-typescale-title-medium-letter-spacing;
+}
+
+@mixin title-small {
+    font-style: $md-sys-typescale-title-small-font-family-style;
+    font-weight: $md-sys-typescale-title-small-font-weight;
+    font-size: $md-sys-typescale-title-small-font-size;
+    line-height: $md-sys-typescale-title-small-line-height;
+    letter-spacing: $md-sys-typescale-title-small-letter-spacing;
+}
