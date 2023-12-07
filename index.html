@@ -13,53 +13,14 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#f9f9f9" />
-        <script src="
-        https://cdn.jsdelivr.net/npm/dompurify@3.0.1/dist/purify.min.js
-        "></script>
-        <script
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js"
-            crossorigin="anonymous"
-        ></script>
         <link rel="stylesheet" href="./style/reset.css" />
         <link rel="stylesheet" href="./style/style.css" />
-        <style>
-            img.emoji {
-                height: 1em;
-                width: 1em;
-                margin: 0 0.05em 0 0.1em;
-                vertical-align: -0.1em;
-                pointer-events: none;
-            }
-        </style>
         <title>ChatGPTranslate</title>
     </head>
     <body>
-        <div class="grid-container">
+        <div class="main-container">
             <header>
                 <h1>ChatGPTranslate</h1>
-                <button id="modal-btn" class="transparent svg-24">
-                    <svg
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"
-                        ></path>
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                        ></path>
-                    </svg>
-                </button>
             </header>
             <main>
                 <textarea
@@ -68,148 +29,17 @@
                     spellcheck="false"
                 ></textarea>
                 <div class="btn-container">
-                    <button type="button" id="translate-btn" class="" disabled>
-                        Translate
-                    </button>
-                    <select id="target-lang">
-                        <option value="" selected>Select a language</option>
-                    </select>
-                    <select id="style-select"></select>
+                    <p>Container!</p>
                 </div>
                 <textarea
                     id="target-text"
-                    placeholder="Translation"
+                    placeholder="placeholder..."
                     autocomplete="off"
                     spellcheck="false"
                     readonly
                 ></textarea>
             </main>
-            <footer>
-                <div class="translateinfo-container">
-                    <p id="completion-info">
-                        The number of tokens used and the fee are displayed
-                        here.
-                    </p>
-                    <p id="usage-info">
-                        This month's usage fee will be displayed here.
-                    </p>
-                </div>
-            </footer>
         </div>
-
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header-container">
-                    <div class="modal-header">
-                        <div class="modal-titlebar">
-                            <button
-                                type="button"
-                                class="transparent"
-                                id="modal-close"
-                            >
-                                <svg
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        clip-rule="evenodd"
-                                        fill-rule="evenodd"
-                                        d="M7.793 2.232a.75.75 0 01-.025 1.06L3.622 7.25h10.003a5.375 5.375 0 010 10.75H10.75a.75.75 0 010-1.5h2.875a3.875 3.875 0 000-7.75H3.622l4.146 3.957a.75.75 0 01-1.036 1.085l-5.5-5.25a.75.75 0 010-1.085l5.5-5.25a.75.75 0 011.06.025z"
-                                    ></path>
-                                </svg>
-                            </button>
-                            <h1>Setting</h1>
-                        </div>
-                        <p>
-                            All settings are saved locally using Local Storage.
-                        </p>
-                    </div>
-                    <div class="btn-container">
-                        <button type="button" id="setting-save">Save</button>
-                        <button type="button" id="setting-reset">Reset</button>
-                    </div>
-                </div>
-                <!-- Setting list -->
-                <div class="setting-list-container">
-                    <!-- OpenAI API Key -->
-                    <div
-                        class="setting-container"
-                        data-icon="🔑"
-                        data-title="OpenAI API Key"
-                        data-desc="Enter the API key obtained from OpenAI."
-                    >
-                        <input
-                            placeholder=""
-                            type="password"
-                            id="api-key"
-                            class="wide"
-                        />
-                    </div>
-                    <!-- Prompt preset -->
-                    <div
-                        class="setting-container no-column"
-                        data-icon="📝"
-                        data-title="Prompt preset"
-                        data-desc="Coming soon..."
-                    >
-                        <select name="" id="pronpt-select" disabled>
-                            <option value="">Coming soon...</option>
-                        </select>
-                    </div>
-                    <p>Debug</p>
-                    <!-- Notification test -->
-                    <div
-                        class="setting-container"
-                        data-icon="🔔"
-                        data-title="Notification test"
-                        data-desc="Testing notification function."
-                    >
-                        <input
-                            placeholder="Notification content"
-                            type="text"
-                            value="Notification content"
-                            id="notification-test-content"
-                            class="wide"
-                        />
-                        <div class="btn-container">
-                            <input
-                                placeholder="Duration"
-                                type="number"
-                                class="small"
-                                min="0"
-                                value="5000"
-                                id="notification-test-duration"
-                            />
-                            <!-- <p>ms</p> -->
-                            <select id="notification-test-list">
-                                <option value="default">Default</option>
-                                <option value="success">Success</option>
-                                <option value="warning">Warning</option>
-                                <option value="error">Error</option>
-                            </select>
-                            <button type="button" id="notification-test-button">
-                                Test
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Setting list end -->
-                <div class="modal-footer">
-                    <p>
-                        Press the button on the upper right to close this
-                        window.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div id="notification-container">
-            <!-- 通知はここに動的に追加されます -->
-        </div>
-        <!-- <footer>
-                <p>Copyright &copy; 2023</p>
-        </footer> -->
-        <script src="./script/main.js" type="module"></script>
+        <!-- <script src="./script/main.js" type="module"></script> -->
     </body>
 </html>
