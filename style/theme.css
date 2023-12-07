@@ -2,6 +2,52 @@
 @import url(./material/color.light.css) (prefers-color-scheme: light);
 @import url(./material/color.dark.css) (prefers-color-scheme: dark);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+* {
+  color: var(--md-sys-color-on-surface);
+}
+
 body {
+  background-color: var(--md-sys-color-surface);
   font-family: "Roboto", "Noto Sans JP", sans-serif;
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  height: 100vh;
+  margin-inline: 8px;
+}
+
+header {
+  -webkit-margin-before: 8px;
+          margin-block-start: 8px;
+}
+header h1 {
+  font-style: Regular;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: 0;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-block: 8px;
+  gap: 8px;
+}
+
+main textarea {
+  flex-grow: 1;
+  resize: none;
+}
+
+textarea {
+  padding: 16px;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
 }/*# sourceMappingURL=theme.css.map */
