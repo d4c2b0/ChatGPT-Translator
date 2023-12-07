@@ -1,0 +1,15 @@
+$elevation: (
+  "level0": 0px,
+  "level1": 1px,
+  "level2": 3px,
+  "level3": 6px,
+  "level4": 8px,
+  "level5": 12px,
+);
+
+@mixin shadow($level: "level0") {
+  transition: box-shadow 0.5s;
+  box-shadow: 0px #{map-get($elevation, $level)} calc(
+      #{map-get($elevation, $level)} * 2
+    ) -#{map-get($elevation, $level)} var(--md-sys-color-shadow);
+}

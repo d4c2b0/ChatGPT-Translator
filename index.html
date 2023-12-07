@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <script>
-            var userAgentIE = window.navigator.userAgent.toLowerCase();
-            if (
-                userAgentIE.indexOf("msie") != -1 ||
-                userAgentIE.indexOf("trident") != -1
-            ) {
-                window.location.replace("./ie/");
-            }
-        </script>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style/reset.css" />
-        <link rel="stylesheet" href="./style/style.css" />
-        <title>ChatGPTranslate</title>
-    </head>
-    <body>
-        <div class="main-container">
-            <header>
-                <h1>ChatGPTranslate</h1>
-            </header>
-            <main>
-                <textarea
-                    id="source-text"
-                    autocomplete="off"
-                    spellcheck="false"
-                ></textarea>
-                <div class="btn-container">
-                    <p>Container!</p>
-                </div>
-                <textarea
-                    id="target-text"
-                    placeholder="placeholder..."
-                    autocomplete="off"
-                    spellcheck="false"
-                    readonly
-                ></textarea>
-            </main>
+  <head>
+    <script>
+      var userAgentIE = window.navigator.userAgent.toLowerCase();
+      if (
+        userAgentIE.indexOf("msie") != -1 ||
+        userAgentIE.indexOf("trident") != -1
+      ) {
+        window.location.replace("./ie/");
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/theme.css" />
+    <link rel="stylesheet" href="./style/custom.css" />
+    <title>ChatGPTranslate</title>
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>ChatGPTranslate</h1>
+      </header>
+      <main>
+        <textarea
+          id="source-text"
+          autocomplete="off"
+          spellcheck="false"
+        ></textarea>
+        <div class="btn-container">
+          <p>Container!</p>
         </div>
-        <!-- <script src="./script/main.js" type="module"></script> -->
-    </body>
+        <textarea
+          id="target-text"
+          placeholder="placeholder..."
+          autocomplete="off"
+          spellcheck="false"
+          readonly
+        ></textarea>
+      </main>
+    </div>
+    <!-- <script src="./script/main.js" type="module"></script> -->
+  </body>
 </html>
