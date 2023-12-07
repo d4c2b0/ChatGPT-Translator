@@ -4,4 +4,4 @@ This is the code for [ChatGPTranslate](https://d4c2b0.github.io/ChatGPT-Translat
 
 ## License
 
-See the [LICENSE](https://github.com/d4c2b0/ChatGPT-Translator/blob/master/LICENSE) file in this repo.
+See the [LICENSE](https://github.com/d4c2b0/ChatGPT-Translator/blob/main/LICENSE) file in this repo.
