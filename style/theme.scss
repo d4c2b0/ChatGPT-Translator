@@ -12,42 +12,43 @@
 }
 
 body {
+  color: var(--md-sys-color-on-surface);
   background-color: var(--md-sys-color-surface);
   font-family: "Roboto", "Noto Sans JP", sans-serif;
 }
 
-.main-container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-  height: 100vh;
-  margin-inline: 8px;
-}
+// .main-container {
+//   display: grid;
+//   grid-template-rows: auto 1fr auto;
+//   grid-template-columns: 100%;
+//   height: 100vh;
+//   margin-inline: 8px;
+// }
 
-header {
-  h1 {
-    @include type.display-small;
-  }
-  margin-block-start: 8px;
-}
+// header {
+//   h1 {
+//     @include type.display-small;
+//   }
+//   margin-block-start: 8px;
+// }
 
-main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  margin-block: 8px;
-  gap: 8px;
-}
+// main {
+//   flex-grow: 1;
+//   display: flex;
+//   flex-direction: column;
+//   margin-block: 8px;
+//   gap: 8px;
+// }
 
-main textarea {
-  flex-grow: 1;
-  resize: none;
-}
+// main textarea {
+//   flex-grow: 1;
+//   resize: none;
+// }
 
-textarea {
-  padding: 16px;
-  border: none;
-  @include shape.corner("large");
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-}
+// textarea {
+//   padding: 16px;
+//   border: none;
+//   @include shape.corner("large");
+//   background-color: var(--md-sys-color-secondary-container);
+//   color: var(--md-sys-color-on-secondary-container);
+// }
